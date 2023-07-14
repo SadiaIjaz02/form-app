@@ -1,8 +1,11 @@
+// libraries imports
 import { useState } from 'react';
 import { ChangeEvent,FormEvent } from 'react';
 import { Link } from "react-router-dom";
-import { addReqFunc } from './LoginListPost';
+import { Form, Button } from 'react-bootstrap';
 
+// component imports
+import { addReqFunc } from '../API/LoginListPost';
 
 const FormPage = () => {
   const [formData, setFormData] = useState({id:0,

@@ -1,6 +1,6 @@
 //imports for components
-import FormPage from './components/Form.Page'
-import LoginListpage from './components/LoginList.page';
+import FormPage from './components/Pages/Form.Page'
+import LoginListpage from './components/Pages/LoginList.page';
 
 
 

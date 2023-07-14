@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useQuery } from 'react-query'
-import { DataType } from '../interfaces';
+import { DataType } from '../../interfaces';
 
 
 const fetchFunc = (page:number) =>{

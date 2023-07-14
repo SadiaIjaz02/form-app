@@ -1,6 +1,6 @@
 import {useQuery,useMutation} from 'react-query'
 import axios from 'axios'
-import { DataType } from '../interfaces'
+import { DataType } from '../../interfaces'
 
 
 const fetchFunc2 = (userLogin:DataType) =>{
