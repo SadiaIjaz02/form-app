@@ -28,7 +28,7 @@ function LoginListpage() {
     try {
       await deleteData(id);
       // Refetch data after deletion
-      setPage((prevPage) => prevPage - 1);
+      setPage((pagePage) => pagePage - 1);
     } catch (error) {
       console.error('Error deleting data:', error);
     }
@@ -51,17 +51,14 @@ function LoginListpage() {
       </div>
 
       <div>
-        <Button
-          variant="primary"
-          className="butn mt-3"
+        <Button variant="primary" className="butn mt-3"
           onClick={() => setPage(page - 1)}
           disabled={page === 1}
         >
           Prev Page
         </Button>
         <Button
-          variant="primary"
-          className="butn mt-3 ms-2"
+          variant="primary" className="butn mt-3 ms-2"
           onClick={() => setPage(page + 1)}
           disabled={page === 10}
         >
