@@ -5,7 +5,6 @@ import { DataType } from '../../interfaces';
 
 const fetchFunc = (page:number) =>{
     return axios.get<DataType[]>(`http://localhost:3001/users?_limit=1&_page=${page}`);
-    
 }
 
 

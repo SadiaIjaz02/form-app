@@ -45,3 +45,9 @@
   color: white;
   background-color: purple;
 }
+
+.errorStyle{
+  color: red;
+  font-size: 13px;
+  text-align: right;
+}

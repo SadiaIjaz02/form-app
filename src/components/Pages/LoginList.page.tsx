@@ -1,6 +1,8 @@
-import LoginListGet from "../API/LoginListGet"
+import {LoginListGet} from "../API/LoginListGet"
+import { deleteData } from "../API/LoginListDelete";
 import {useState} from 'react'
 import { Link } from "react-router-dom";
+import { Button } from 'react-bootstrap';
 
 
 function LoginListpage() {
@@ -24,19 +26,42 @@ function LoginListpage() {
         return <h2>{(error as Error).message}</h2>
       }
    
+
+      const handleDelete = async (id: number) => {
+        try {
+          await deleteData(id);
+          // Refetch data after deletion
+          setPage((prevPage) => prevPage-1);
+        } catch (error) {
+          console.error('Error deleting data:', error);
+        }
+      };
+
+      
     return (
     <>
     <div>
-        <h2>LoginListpage</h2>
+        <h2>Login List Page</h2>
         {
             data?.data.map(tKey=>{
                 return (<div key={tKey.id}>
                     <p>Name: {tKey?.name}</p> 
                     <p>Email: {tKey?.email}</p>
+                    <p>Subscription Type: {tKey?.subs}</p>
+                    <p>Terms and Conditions: {tKey?.terms}</p>
+                    <Button variant="danger" onClick={() => handleDelete(tKey.id)}>
+                      Delete Data
+                    </Button>
+                    
                 </div>);
             })
         }
     </div>
+
+
+    
+
+
     <div>
         <button className="butn" onClick={()=>setPage(page-1)} disabled={page===1}>
             Prev Page
