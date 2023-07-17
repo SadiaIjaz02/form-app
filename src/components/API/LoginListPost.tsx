@@ -3,6 +3,7 @@ import { DataType } from '../../interfaces';
 import { request } from '../../utils/Axios-Utils';
 
 const fetchFunc2 = (userLogin: DataType) => {
+  //return axios.post(`http://localhost:3001/users/`,userLogin)
   return request({
     url: '/users',
     method: 'post',
