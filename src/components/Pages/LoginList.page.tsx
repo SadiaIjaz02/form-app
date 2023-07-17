@@ -48,7 +48,6 @@ function LoginListpage() {
                     <p>Name: {tKey?.name}</p> 
                     <p>Email: {tKey?.email}</p>
                     <p>Subscription Type: {tKey?.subs}</p>
-                    <p>Terms and Conditions: {tKey?.terms}</p>
                     <Button variant="danger" onClick={() => handleDelete(tKey.id)}>
                       Delete Data
                     </Button>
